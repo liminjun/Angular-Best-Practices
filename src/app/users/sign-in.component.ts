@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router'
 
-import { DataRepositoryService } from '../services/data-repository'
+import { UserRepositoryService } from '../services/user-repository.service';
 
 @Component({
   styles: [`
@@ -75,10 +75,10 @@ import { DataRepositoryService } from '../services/data-repository'
 export class SignInComponent {
   credentials:any = {};
 
-  constructor(private router:Router, private dataRepository:DataRepositoryService) { }
+  constructor(private router:Router, private userRepository:UserRepositoryService) { }
 
   signIn(credentials:any) {
-    this.dataRepository.signIn(credentials)
+    this.userRepository.signIn(credentials)
       .subscribe(
         null,
         (err) => {console.error(err, 'Error')},
@@ -104,7 +104,7 @@ export class RegisterComponent {
   password: FormControl;
   saving:boolean=false;
 
-  constructor(private router:Router, private dataRepository:DataRepositoryService) { }
+  constructor(private router:Router, private userRepository:UserRepositoryService) { }
 
   ngOnInit() {
     this.firstName = new FormControl('', Validators.required);
@@ -122,7 +122,7 @@ export class RegisterComponent {
 
   registerUser(user) {
     this.saving=true;
-    this.dataRepository.saveUser(user)
+    this.userRepository.saveUser(user)
       .subscribe(
         null,
         ()=>this.saving=false,

@@ -10,8 +10,9 @@ import { NavBarComponent }  from './components/nav-bar';
 import { CatalogComponent } from "./catalog/catalog.component";
 import { RegisterComponent } from "./users/sign-in.component";
 import { SignInComponent } from "./users/sign-in.component";
-import { LoadingComponent } from "./components/loading-spinner";
-import { DataRepositoryService } from "./services/data-repository"
+import { LoadingSpinnerComponent } from "./components/loading-spinner.component";
+import { CatalogRepositoryService } from "./catalog/catalog-repository.service";
+import { UserRepositoryService } from "./services/user-repository.service";
 import { AccountMenuComponent } from "./components/account-menu";
 
 @NgModule({
@@ -28,10 +29,13 @@ import { AccountMenuComponent } from "./components/account-menu";
     CatalogComponent,
     RegisterComponent,
     SignInComponent,
-    LoadingComponent,
+    LoadingSpinnerComponent,
     AccountMenuComponent
   ],
-  providers: [ DataRepositoryService ],
+  providers: [ 
+    CatalogRepositoryService,
+    UserRepositoryService
+   ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
