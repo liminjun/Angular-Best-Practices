@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { UserRepositoryService } from "../services/user-repository.service";
+import { UserRepositoryService } from "./user-repository.service";
 
 @Component({
   selector: 'nav-bar',
-  styleUrls: [`../styles/nav-bar.css`],
+  styleUrls: [`../core/nav-bar.component.css`],
   template: `
     <div class="nav-bar">
       <img class="logo" src="/assets/images/whitebeard-logo.png" alt="Whitebeard Logo" />

@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
 
-import {UserRepositoryService} from '../services/user-repository.service';
+import {UserRepositoryService} from '../core/user-repository.service';
 @Injectable()
 export class CatalogRepositoryService {
  
