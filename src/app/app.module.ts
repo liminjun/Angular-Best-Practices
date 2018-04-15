@@ -8,7 +8,7 @@ import { appRoutes } from './routes'
 
 
 
-import { RegisterComponent } from "./users/sign-in.component";
+import { RegisterComponent } from "./users/register.component";
 import { SignInComponent } from "./users/sign-in.component";
 
 

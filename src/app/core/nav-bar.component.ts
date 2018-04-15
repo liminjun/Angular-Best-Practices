@@ -5,13 +5,7 @@ import { UserRepositoryService } from "./user-repository.service";
 @Component({
   selector: 'nav-bar',
   styleUrls: [`../core/nav-bar.component.css`],
-  template: `
-    <div class="nav-bar">
-      <img class="logo" src="/assets/images/whitebeard-logo.png" alt="Whitebeard Logo" />
-      <div class="nav-item"><a [routerLink]="['/catalog']">Catalog</a></div>
-      <account-menu [user]="currentUser" (signedOut)="handleSignOut()"></account-menu>
-    </div>
-`
+  templateUrl:'../core/nav-bar.component.html'
 })
 
 export class NavBarComponent  {
