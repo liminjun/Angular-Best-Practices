@@ -8,8 +8,6 @@ import { appRoutes } from './routes'
 
 
 
-import { RegisterComponent } from "./users/register.component";
-import { SignInComponent } from "./users/sign-in.component";
 
 
 import {CoreModule} from "./core/core.module";
@@ -29,11 +27,7 @@ import { CatalogModule } from './catalog/catalog.module';
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
-    AppComponent,
-    RegisterComponent,
-    SignInComponent
-    
-    
+    AppComponent 
   ],
   providers: [ 
    ],

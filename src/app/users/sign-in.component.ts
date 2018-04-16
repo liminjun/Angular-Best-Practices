@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router'
 
-import { UserRepositoryService } from '../core/user-repository.service';
+import { UserRepositoryService } from '../users/user-repository.service';
 
 @Component({
   styleUrls: ['./sign-in.component.css'],
